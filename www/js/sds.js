@@ -292,7 +292,7 @@ function GetUserStages(userid)
                     if($("#hidStatusId").val() == data[i])
                     {
                         $("#btnSubmit").attr('disabled', false);
-                        //DisableButton(obj, '', alocid);
+                        DisableButton(obj, '', alocid);
                         break;
                     }
                     else $("#btnSubmit").attr('disabled', true);
@@ -502,7 +502,7 @@ function ShowObjects()
 
 function DisableButton(obj, plocid, alocid)
 {
-    $("#lblerr").html();
+    $("#lblerr").html();debugger;
     $("#btnSubmit").prop('disabled', false);
     if(obj == 'SDS ACK IN' || obj == 'SDS-OUT ACK' || obj == 'EXIT') {
         $("#btnSubmit").prop('disabled', true);
@@ -525,7 +525,7 @@ function DisableButton(obj, plocid, alocid)
 
     if(alocid == 3)
     {
-        if(obj == 'PARKING IN' || obj == 'PARKING OUT')
+        if(obj == 'PARKING IN' || obj == 'PARKING OUT' || obj == 'KPCT OUT')
             $("#btnSubmit").prop('disabled', false);
         else
             $("#btnSubmit").prop('disabled', true);
